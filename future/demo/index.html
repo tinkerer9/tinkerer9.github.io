@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CollaboKeys Demo</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="container">
+        <div class="item header">
+            <div class="header-text">
+                <h1>CollaboKeys Demo</h1>
+                <p><i>A non-emulating demonstration of CollaboKeys Admin.<br>
+                Not all controls were added to this demo.<br>
+                Learn more at <a href="https://github.com/tinkerer9/CollaboKeys"target="_blank" >github.com/tinkerer9/CollaboKeys</a>.</i></p>
+            </div>
+            <div class="header-logo">
+                <a href="https://github.com/tinkerer9/CollaboKeys" target="_blank"><img src="logo.png" alt="CollaboKeys Logo"></a>
+            </div>
+        </div>
+
+        <div class="item controls">
+            <h2>Controls:</h2>
+
+            <input type="text" id="customCommandText" placeholder="command">
+            <button id="customCommand">enter</button><br><br>
+
+            <button id="pressCommand">press</button>
+            <input type="text" id="pressCommandArg0" placeholder="key"><br><br>
+
+            <button id="uriCommand">show link</button><br><br>
+
+            <select id="wrCommandArg0">
+                <option value="admit">admit</option>
+                <option value="dismiss">dismiss</option>
+            </select>
+            <select id="wrCommandArg1">
+                <option value="all">all players</option>
+                <option value="player">specific player</option>
+            </select>
+            <input type="number" id="wrCommandArg2" min="1" step="1" placeholder="player id">
+            <button id="wrCommand">run</button><br><br>
+
+            <button id="lsCommand">list</button>
+            <select id="lsCommandArg0">
+                <option value="all">all players</option>
+                <option value="active">active players</option>
+                <option value="waitingroom">players in waiting room</option>
+                <option value="nameless">nameless players</option>
+            </select><br><br>
+
+            <select id="keyCommandArg0">
+                <option value="revoke">revoke</option>
+                <option value="enable">enable</option>
+                <option value="disable">disable</option>
+            </select>
+            <select id="keyCommandArg1">
+                <option value="all">all keys</option>
+                <option value="keyname">specific key</option>
+            </select>
+            <input type="input" id="keyCommandArg2" placeholder="keyname">
+            <button id="keyCommand">run</button><br><br>
+
+            <button id="kcCommand">list keycodes</button><br><br>
+
+            <button id="clearResponsesCommand">clear responses</button><br>
+
+            <p><i>Other commands are also supported. <a href="https://github.com/tinkerer9/CollaboKeys#console-controls" target="_blank">Learn more</a></i></p>
+        </div>
+
+        <div class="item responses">
+            <h2>Responses:</h2>
+            <ul id="responsesList">
+                <li><b>Welcome to CollaboKeys Admin!</b><br>Press any control on the left.</li>
+            </ul><br>
+        </div>
+    </div>
+
+    <script src="player.js"></script>
+    <script src="keycodes.js"></script>
+    <script src="command.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

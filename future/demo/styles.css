@@ -1,0 +1,113 @@
+html, body {
+    font-family: "Roboto", sans-serif;
+
+    height: 100%;
+    margin: 0;
+    padding: 0;
+
+    background-image: linear-gradient(to bottom, rgb(46, 46, 46), rgb(0, 0, 0));
+    background-color: black;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    overflow: hidden;
+    overscroll-behavior: none;
+
+    overflow-wrap: break-word;
+}
+
+.container {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr; /* horizontal ratios */
+    grid-template-rows: 1fr 2fr; /* vertical ratios */
+
+    grid-template-areas:
+        "header header" /* header merged */
+        "controls responses";
+
+    height: 100vh;
+    gap: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.header {
+    grid-area: header;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.header-text {
+    grid-column: 1;
+}
+
+.header-logo {
+    grid-column: 2;
+    justify-self: end;
+}
+
+.header-logo img {
+    height: 64px;
+}
+
+.controls {
+    grid-area: controls;
+
+    overflow-y: scroll;
+    overflow-x: hidden;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+#enter {
+    margin-bottom: 20px;
+}
+
+#wrCommandArg2, #keyCommandArg2 {
+    display: none;
+}
+
+.responses {
+    grid-area: responses;
+
+    overflow-y: scroll;
+    overflow-x: hidden;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+#responsesList {
+    list-style: none;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+#responsesList li:first-child {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+#responsesList li {
+    margin-bottom: 10px;
+}
+.contentHeaders {
+    margin-top: 0;
+}
+
+.item {
+    border-radius: 1em;
+    background-color: white;
+    padding: 30px;
+}
+
+.item *:first-child {
+    margin-top: 0;
+}
