@@ -12,11 +12,6 @@ author:
 # Build settings
 markdown:       kramdown
 
-# Assets
-sass:
-  sass_dir:     _sass
-  style:        compressed
-
 # Gems
 plugins:
   - jekyll-feed
