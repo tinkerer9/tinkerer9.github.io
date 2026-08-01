@@ -1,12 +1,12 @@
 # Site settings
 title:          Max Parisi
 description:    Homepage
-url:            https://tinkerer9.github.io
+url:            https://gh.maxparisi.me
 
 # Author
 author:
   name:         Max Parisi
-  email:        makermax101@gmail.com
+  email:        max@maxparisi.me
   url:          https://maxparisi.me
 
 # Build settings
